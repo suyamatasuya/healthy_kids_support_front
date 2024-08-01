@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-yellow-50 text-gray-900;
+  font-family: 'Rounded Mplus 1c', sans-serif;
+}
+
+.container {
+  @apply mx-auto p-4 max-w-screen-lg;
+}
+
+.header, .footer {
+  @apply bg-orange-300 p-4 text-center;
+}
+
+.main {
+  @apply p-4;
+}
+
+.button {
+  @apply bg-orange-500 text-white py-2 px-4 rounded-lg font-semibold;
+}
+
+.button:hover {
+  @apply bg-orange-600;
+}
