@@ -1,4 +1,5 @@
 import React from 'react';
+import LoginButton from '../components/LoginButton';
 
 const Home: React.FC = () => {
   return (
@@ -8,6 +9,7 @@ const Home: React.FC = () => {
       </header>
       <main className="main">
         <p>Welcome to the Healthy Kids Support App!</p>
+        <LoginButton />
       </main>
       <footer className="footer">
         <p>&copy; 2024 Healthy Kids Support. All rights reserved.</p>
