@@ -8,7 +8,6 @@ const LoginButton: React.FC = () => {
     const saveUserToBackend = async () => {
       if (session?.user) {
         try {
-          // CSRF トークンの取得
           const csrfToken = await fetchCSRFToken();
 
           const res = await fetch('http://localhost:3001/users', {
@@ -47,11 +46,11 @@ const LoginButton: React.FC = () => {
     return (
       <>
         <p>Signed in as {session.user.email}</p>
-        <button onClick={() => signOut()}>Sign out</button>
+        <button onClick={() => signOut()}>ログアウトする</button>
       </>
     );
   }
-  return <button onClick={() => signIn('google')}>Sign in with Google</button>;
+  return <button onClick={() => signIn('google')}>Googleでログインする</button>;
 };
 
 export default LoginButton;

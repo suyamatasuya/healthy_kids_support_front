@@ -8,15 +8,11 @@ body {
 }
 
 .container {
-  @apply mx-auto p-4 max-w-screen-lg;
+  @apply mx-auto;
 }
 
 .header, .footer {
   @apply bg-orange-300 p-4 text-center;
-}
-
-.main {
-  @apply p-4;
 }
 
 .button {
