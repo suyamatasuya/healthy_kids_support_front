@@ -2,8 +2,15 @@ import React, { useState } from 'react';
 
 export const ProfileEditModal: React.FC<{ onClose: () => void, onSave: (name: string) => void }> = ({ onClose, onSave }) => {
   const [username, setUsername] = useState('');
+  const [error, setError] = useState<string | null>(null);
 
   const handleSave = () => {
+    if (username.trim() === '') {
+      setError('ユーザー名を入力してください');
+      return;
+    }
+
+    setError(null);
     onSave(username);
   };
 
@@ -19,6 +26,7 @@ export const ProfileEditModal: React.FC<{ onClose: () => void, onSave: (name: st
             onChange={(e) => setUsername(e.target.value)}
             className="w-full p-2 border border-gray-300 rounded-lg"
           />
+          {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
         </div>
         <div className="flex justify-end">
           <button className="bg-gray-300 text-black px-4 py-2 rounded-lg mr-2" onClick={onClose}>

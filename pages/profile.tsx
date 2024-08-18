@@ -25,14 +25,19 @@ const Profile: React.FC = () => {
   const handleSave = (updatedName: string) => {
     if (!user) return;
 
-    fetch(`/api/users/${user.id}`, {
+    fetch(`http://localhost:3001/users/${user.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ name: updatedName }),
     })
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to update user data');
+        }
+        return response.json();
+      })
       .then(data => setUser(data.user))
       .catch(error => console.error('Error updating user:', error));
 
