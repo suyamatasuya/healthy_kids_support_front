@@ -1,0 +1,48 @@
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 20px;
+  right: 30px;  /* 右に配置 */
+  top: 25px;  /* 上に移動 */
+}
+
+.bm-burger-bars {
+  background: white;
+}
+
+.bm-menu {
+  background: white; /* メニュー背景を白に */
+  font-size: 1.15em;
+  border-radius: 10px; /* 角を丸く */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
+  width: 200px; /* 横幅を小さく */
+  height: 150px; /* 縦幅を小さく */
+  transition: none !important; /* アニメーションを無効化 */
+}
+
+.bm-item-list {
+  padding: 1em;  /* 内側のパディング */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 中央揃え */
+}
+
+.bm-item {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: orange;  /* 文字色をオレンジに変更 */
+  background-color: white; /* テキストの背景を白に */
+  padding: 10px 20px; /* 背景サイズを調整 */
+  border-radius: 5px; /* 角を丸く */
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  transition: none !important; /* アニメーションを無効化 */
+}
+
+.bm-menu-wrap {
+  transform: none !important;  /* アニメーションをなくすためにtransformを無効化 */
+  transition: none !important;  /* アニメーションを完全に無効化 */
+}
